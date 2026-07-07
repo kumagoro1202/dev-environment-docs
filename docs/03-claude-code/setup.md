@@ -34,32 +34,33 @@ stats-cache.json  tasks  telemetry  todos
 
 ### 2. カスタムスキル（~/.claude/skills/）
 
-31個のカスタムスキルを搭載。主なカテゴリ:
+31個のカスタムスキルを搭載。主なカテゴリ
+（マルチエージェント系スキルの内部プレフィックスは公開用に `<prefix>` と伏せ字表記）:
 
 | カテゴリ | スキル例 | 用途 |
 |---------|---------|------|
-| shogun-xxx | shogun-kb-builder, shogun-adr-creator 等 | マルチエージェント制御・ドキュメント生成 |
+| `<prefix>`-xxx | `<prefix>`-kb-builder, `<prefix>`-adr-creator 等 | マルチエージェント制御・ドキュメント生成 |
 | kakeibo-xxx | kakeibo-db-verify | 家計簿アプリ専用操作 |
 | m4a-minutes-creator | — | 音声→議事録変換 |
 
-スキル一覧:
+スキル一覧（`<prefix>`-系は内部プレフィックスを省略して記載）:
 ```
-kakeibo-db-verify.md         shogun-nablarch-architecture-explorer
-m4a-minutes-creator          shogun-nablarch-doc-generator
-shogun-adr-creator           shogun-nablarch-handler-queue-designer
-shogun-community-research-report  shogun-nablarch-knowledge-builder
-shogun-concurrent-branch-guard    shogun-nablarch-quality-gate-setup
-shogun-doc-reorganizer        shogun-onnx-embedding-migrator
-shogun-doc-translator-ja      shogun-project-registration
-shogun-engineer-training-plan-generator  shogun-project-scaffold
-shogun-fintan-content-scraper shogun-project-status-analyzer
-shogun-framework-knowledge-builder  shogun-rag-system-planner
-shogun-framework-mcp-server-planner shogun-spring-mockvc-test-pattern
-shogun-kb-builder             shogun-tech-article-simplifier
-shogun-mcp-api-doc-generator  shogun-tech-comparison-report
-shogun-mcp-integration-test-doc-generator shogun-tutorial-article-generator
-shogun-mcp-prompt-generator   shogun-yaml-resource-provider-generator
-shogun-mcp-server-scaffold
+kakeibo-db-verify.md         <prefix>-nablarch-architecture-explorer
+m4a-minutes-creator          <prefix>-nablarch-doc-generator
+<prefix>-adr-creator         <prefix>-nablarch-handler-queue-designer
+<prefix>-community-research-report  <prefix>-nablarch-knowledge-builder
+<prefix>-concurrent-branch-guard    <prefix>-nablarch-quality-gate-setup
+<prefix>-doc-reorganizer     <prefix>-onnx-embedding-migrator
+<prefix>-doc-translator-ja   <prefix>-project-registration
+<prefix>-engineer-training-plan-generator  <prefix>-project-scaffold
+<prefix>-fintan-content-scraper <prefix>-project-status-analyzer
+<prefix>-framework-knowledge-builder  <prefix>-rag-system-planner
+<prefix>-framework-mcp-server-planner <prefix>-spring-mockvc-test-pattern
+<prefix>-kb-builder          <prefix>-tech-article-simplifier
+<prefix>-mcp-api-doc-generator  <prefix>-tech-comparison-report
+<prefix>-mcp-integration-test-doc-generator <prefix>-tutorial-article-generator
+<prefix>-mcp-prompt-generator   <prefix>-yaml-resource-provider-generator
+<prefix>-mcp-server-scaffold
 ```
 
 ### 3. プロジェクト固有設定（例: org-shogun/.claude/settings.json）
