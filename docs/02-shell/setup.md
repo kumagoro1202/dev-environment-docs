@@ -28,7 +28,8 @@ export NVM_DIR="$HOME/.nvm"
 
 ```bash
 # マルチエージェント作業用セッションへの接続ショートカット
-alias css='tmux attach-session -t shogun'
+# （指揮用セッション名は公開用に <main-session> と伏せ字表記）
+alias css='tmux attach-session -t <main-session>'
 alias csm='tmux attach-session -t multiagent'
 ```
 
@@ -67,7 +68,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 cat >> ~/.bashrc << 'EOF'
 
 # マルチエージェント作業用セッションへの接続ショートカット
-alias css='tmux attach-session -t shogun'
+# （指揮用セッション名は公開用に <main-session> と伏せ字表記）
+alias css='tmux attach-session -t <main-session>'
 alias csm='tmux attach-session -t multiagent'
 
 # Claude Code CLI PATH
